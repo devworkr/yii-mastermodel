@@ -6,7 +6,14 @@ abstract class MasterModel extends CActiveRecord
         return array(
             'HGuidBehavior' => array(
                 'class' => 'application.behaviors.HGuidBehavior',
-            )
+            ),
+            'SlugBehavior' => array(
+				'class' => 'application.behaviors.SlugBehavior',
+				'slug_col' => 'slug',
+				'title_col' => 'title',
+				'max_slug_chars' => 125,
+				'overwrite' => false
+			),
            
         );
     }
